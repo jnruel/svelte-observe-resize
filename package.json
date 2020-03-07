@@ -1,0 +1,28 @@
+{
+  "name": "svelte-observe-resize",
+  "version": "1.0.0",
+  "description": "Svelte action to use Resize Observer API on an element",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
