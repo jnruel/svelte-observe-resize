@@ -2,27 +2,40 @@
   "name": "svelte-observe-resize",
   "version": "1.0.0",
   "description": "Svelte action to use Resize Observer API on an element",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "files": [
-    "dist/index.js"
+    "dist/bundle.js"
   ],
   "scripts": {
     "build": "rollup -c rollup.config.prod.js",
+    "dev": "rollup -c rollup.config.dev.js -w",
+    "start": "sirv example",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnruel/svelte-observe-resize"
+  },
+  "keywords": [
+    "svelte",
+    "plugin",
+    "action",
+    "resize",
+    "observer"
+  ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "resize-observer-polyfill": "^1.5.1",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
+    "sirv-cli": "^0.4.4",
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4"
+    "resize-observer-polyfill": "^1.5.1"
   },
-  "author": "",
+  "author": "Joe Ruel",
   "license": "ISC"
 }
