@@ -16,12 +16,11 @@ const resizeObserer = new ResizeObserver((entries) => {
  * Example usage: `<div use:watchResize on:resize={handleResize}></div>`
  *
  * @param HTMLElement node
- * @param String box - sets the observe option for box. Can be set to 'content-box' (default) or 'border-box'
  */
-export default function observeResize(node, box) {
+export default function observeResize(node) {
 
   // Watch for node to resize
-  resizeObserer.observe(node, box && { box } );
+  resizeObserer.observe(node);
 
   return {
     // Called when node is unmounted
