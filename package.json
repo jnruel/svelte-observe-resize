@@ -1,6 +1,6 @@
 {
   "name": "svelte-observe-resize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Svelte action to use Resize Observer API on an element",
   "main": "dist/bundle.js",
   "files": [
