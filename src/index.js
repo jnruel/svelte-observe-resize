@@ -1,5 +1,13 @@
 import ResizeObserver from 'resize-observer-polyfill';
 
+// Singleton observer for all nodes
+const resizeObserer = new ResizeObserver((entries) => {
+  // Dispatch custom event when each node is resized
+  entries.forEach(entry => {
+    entry.target.dispatchEvent(new CustomEvent('resize', { detail: entry }));
+  })
+});
+
 /**
  * Custom Svelte action
  *  - Uses Resize Observer API
@@ -10,10 +18,6 @@ import ResizeObserver from 'resize-observer-polyfill';
  * @param HTMLElement node
  */
 export default function observeResize(node) {
-  const resizeObserer = new ResizeObserver((entries) => {
-    // Dispatch custom event when node is resized
-    node.dispatchEvent(new CustomEvent('resize'));
-  });
 
   // Watch for node to resize
   resizeObserer.observe(node);
